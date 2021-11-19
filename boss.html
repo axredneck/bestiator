@@ -7,8 +7,6 @@
 
 <body>
 
-<script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
-
 <script language="Javascript">
 
 // если получаются эти слова, то их не выводить
@@ -35,7 +33,9 @@ var suffix = ['зубка', 'сос', 'жуть', 'потам', 'завр', 'г�
 	'мор', 'лярий', 'рыл', 'гад', 'блюдина', 'навт', 'френия', 'воз',
 	'трон', 'цикл', 'куция', 'кузия', 'хрюндель', 'мороз', 'крыс',
 	'кукиш', 'морж', 'морд', 'рож'];
-monster = _.sample(prefix) + _.sample(suffix);
+monster =
+	prefix[Math.floor(Math.random() * prefix.length)] +
+	suffix[Math.floor(Math.random() * suffix.length)];
 if (!blacklist.includes(monster))
 	document.write("<h1>"+monster+"</h1>");
 
@@ -59,9 +59,12 @@ suffix = ['ункул', 'урочка', 'оид', 'атор', 'унчик', 'у�
 	'унья', 'овина', 'улина', 'ункция', 'улярия', 'умпция', 'уркция',
 	'унтия', 'ант', 'онстр', 'ун', 'авр', 'антроп', 'олог', 'ужас',
 	'ометр', 'ограф', 'усеница'];
-monster = _.sample(prefix) + _.sample(suffix);
+monster =
+	prefix[Math.floor(Math.random() * prefix.length)] +
+	suffix[Math.floor(Math.random() * suffix.length)];
 if (Math.random() > 0.8)
-	monster = _.sample(preprefix) + monster;
+	monster =
+		preprefix[Math.floor(Math.random() * preprefix.length)] + monster;
 if (!blacklist.includes(monster))
 	document.write("<h1>"+monster+"</h1>");
 
@@ -75,9 +78,12 @@ prefix = ['шеруд', 'шмурд', 'зел', 'сос', 'кус', 'грыз', 
 suffix = ['явчик', 'явка', 'юнчик', 'евичок', 'ятина', 'ёныш', 'истор',
 	'ень', 'юлина', 'ище', 'яка', 'юка', 'юк', 'инатор', 'иатр', 'иарх',
 	'иха', 'еница', 'иметр', 'юга'];
-monster = _.sample(prefix) + _.sample(suffix);
+monster =
+	prefix[Math.floor(Math.random() * prefix.length)] +
+	suffix[Math.floor(Math.random() * suffix.length)];
 if (Math.random() > 0.8)
-	monster = _.sample(preprefix) + monster;
+	monster =
+		preprefix[Math.floor(Math.random() * preprefix.length)] + monster;
 if (!blacklist.includes(monster))
 	document.write("<h1>"+monster+"</h1>");
 	
@@ -85,7 +91,9 @@ if (!blacklist.includes(monster))
 prefix = ['hedgeh', 'marshm', 'plasm', 'butterfl', 'nightm', 'eviscer',
 	'caterp', 'alcoh', 'mushr'];
 suffix = ['oid', 'orror', 'onster', 'ulator', 'urtle'];
-monster = _.sample(prefix) + _.sample(suffix);
+monster =
+	prefix[Math.floor(Math.random() * prefix.length)] +
+	suffix[Math.floor(Math.random() * suffix.length)];
 if (!blacklist.includes(monster))
 	document.write("<h1>"+monster+"</h1>");
 
